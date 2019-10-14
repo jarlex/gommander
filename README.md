@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jarlex/angoo">
-    <img src="images/gopher-gun.jpg" alt="Logo" width="120" height="120">
+    <img src="images/gopher-gun.jpg" alt="Logo" width="180" height="180">
   </a>
   <h3 align="center">GoMMander</h3>
 </p>
