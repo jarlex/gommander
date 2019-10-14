@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/jarlex/angoo">
+  <a href="https://github.com/jarlex/gommander">
     <img src="images/gopher-gun.jpg" alt="Logo" width="180" height="180">
   </a>
   <h3 align="center">GoMMander</h3>
