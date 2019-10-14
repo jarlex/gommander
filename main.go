@@ -1,7 +1,7 @@
 package main
 
 import (
-	"globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_gommander.git/gommander"
+	"github.com/jarlex/gommander/command"
 )
 
 // This is an example main

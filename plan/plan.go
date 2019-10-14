@@ -8,8 +8,7 @@ import (
     "os"
     "time"
     
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_gommander.git/step"
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_tongue.git"
+    "github.com/jarlex/gommander/step"
 )
 
 type Plan struct {

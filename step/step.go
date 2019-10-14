@@ -9,8 +9,7 @@ import (
     "sync"
     "time"
     
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_gommander.git/task"
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_tongue.git"
+    "github.com/jarlex/gommander/task"
 )
 
 type Step struct {

@@ -1,4 +1,4 @@
-package gommander
+package command
 
 import (
     "io/ioutil"
@@ -6,10 +6,10 @@ import (
     "os"
     "strings"
     
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_gommander.git/plan"
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_gommander.git/request"
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_gommander.git/step"
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_gommander.git/task"
+    "github.com/jarlex/gommander/plan"
+    "github.com/jarlex/gommander/request"
+    "github.com/jarlex/gommander/step"
+    "github.com/jarlex/gommander/task"
 )
 
 type Config struct {

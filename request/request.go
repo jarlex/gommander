@@ -9,9 +9,6 @@ import (
     "os"
     "strings"
     "time"
-    
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_api_utils.git/jsonutils"
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_tongue.git"
 )
 
 type Request struct {

@@ -9,8 +9,7 @@ import (
     "os"
     "time"
     
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_gommander.git/request"
-    "globaldevtools.bbva.com/bitbucket/scm/nbdnt/nbdnt_tongue.git"
+    "github.com/jarlex/gommander/request"
 )
 
 type Task struct {

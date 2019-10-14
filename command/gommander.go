@@ -1,4 +1,4 @@
-package gommander
+package command
 
 import (
     "fmt"
