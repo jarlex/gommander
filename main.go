@@ -7,6 +7,6 @@ import (
 // This is an example main
 
 func main() {
-	config := gommander.Read("plan")
+	config := command.Read("plan")
 	config.Plan.Execute()
 }
