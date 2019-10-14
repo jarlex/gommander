@@ -9,6 +9,7 @@ import (
     "time"
     
     "github.com/jarlex/gommander/step"
+    "github.com/jarlex/transporter"
 )
 
 type Plan struct {
@@ -47,16 +48,12 @@ func Read(filePath string, steps map[string]*step.Step) (*Plan, error) {
 
 func (p *Plan) Execute() {
     logger := log.New(os.Stdout, "", 0)
-    t := tongue.New()
+    t := transporter.New()
     switch p.AuthType {
-    case "jwt":
-        armadilloToken := new(tongue.ArmadilloJWTResponse)
-        tp := t.New()
-        tp.SetBasicAuth(p.AuthUser, p.AuthPass)
-        tp.Path(p.AuthEndpoint).Post().ReceiveSuccess(armadilloToken)
-        t = t.SetJwtAuth(armadilloToken.Token)
     case "basic":
         t.SetBasicAuth(p.AuthUser, p.AuthPass)
+    default:
+        break
     }
     t.Base(p.URL)
     t.Path(p.Path)

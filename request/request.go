@@ -9,6 +9,8 @@ import (
     "os"
     "strings"
     "time"
+    
+    "github.com/jarlex/transporter"
 )
 
 type Request struct {
@@ -35,7 +37,7 @@ func Read(filePath string) (*Request, error) {
     return &r, nil
 }
 
-func (r *Request) Execute(tg *tongue.Tongue, base string, callData map[string]interface{}) (map[string]interface{}, int, time.Duration, error) {
+func (r *Request) Execute(tg *transporter.Transporter, base string, callData map[string]interface{}) (map[string]interface{}, int, time.Duration, error) {
     var respJSON map[string]interface{}
     
     directedTg := tg.New()
@@ -72,7 +74,7 @@ func (r *Request) Execute(tg *tongue.Tongue, base string, callData map[string]in
         }
     }
     
-    errorJSON := jsonutils.JSONError{}
+    errorJSON := transporter.JSONError{}
     now := time.Now()
     resp, err := directedTg.Path(finalPath).Method(r.Method).BodyJSON(r.Body).Receive(&respJSON, &errorJSON)
     if err != nil {

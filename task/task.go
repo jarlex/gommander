@@ -10,6 +10,7 @@ import (
     "time"
     
     "github.com/jarlex/gommander/request"
+    "github.com/jarlex/transporter"
 )
 
 type Task struct {
@@ -36,7 +37,7 @@ func Read(filePath string, requests map[string]*request.Request) (*Task, error) 
     return &t, nil
 }
 
-func (t *Task) Execute(tg *tongue.Tongue, base string, previousData map[string]interface{}) (map[string]interface{}, time.Duration, error) {
+func (t *Task) Execute(tg *transporter.Transporter, base string, previousData map[string]interface{}) (map[string]interface{}, time.Duration, error) {
     
     if t.PreviousData != nil {
         for _, field := range t.PreviousData {

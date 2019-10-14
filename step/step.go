@@ -10,6 +10,7 @@ import (
     "time"
     
     "github.com/jarlex/gommander/task"
+    "github.com/jarlex/transporter"
 )
 
 type Step struct {
@@ -37,7 +38,7 @@ func Read(filePath string, tasks map[string]*task.Task) (*Step, error) {
     return &s, nil
 }
 
-func (s *Step) Execute(t *tongue.Tongue, base string) {
+func (s *Step) Execute(t *transporter.Transporter, base string) {
     reqEachUser := s.NumPetitions / s.ConcurrentUsers
     var wg sync.WaitGroup
     wg.Add(s.ConcurrentUsers)
